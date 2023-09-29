@@ -8,8 +8,9 @@
 import UIKit
 import Firebase
 import Combine
+import FirebaseAuth
 
-class ViewController: UIViewController {
+class ViewController: ExtensionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,21 @@ class ViewController: UIViewController {
 //        useCombineWithOperators()
 //        useCombineWithRealData()
         
-//        if let user = Auth.auth().currentUser {
-//            print("Datos: ",user.email ?? ""," ID: ",user.uid)
-//        }
+    }
+    
+    private func closeSessionWithFirebase() {
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+            openInitialViewController()
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
     }
 
+    @IBAction func onClickCloseSessionBtn(_ sender: Any) {
+        closeSessionWithFirebase()
+    }
 }
 
 extension ViewController {

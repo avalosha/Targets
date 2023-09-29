@@ -25,6 +25,17 @@ class ExtensionViewController: UIViewController {
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
+    func openInitialViewController() {
+        var storyBoard : UIStoryboard?
+        var vc: UIViewController?
+        
+        storyBoard = UIStoryboard(name: "Main", bundle:nil)
+        vc = storyBoard?.instantiateViewController(withIdentifier: "LoginVC")
+        let nav = UINavigationController(rootViewController: vc ?? UIViewController())
+        UIApplication.shared.windows.first?.rootViewController = nav
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+    
 }
 
 extension ExtensionViewController {

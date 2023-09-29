@@ -58,7 +58,7 @@ class RegisterViewController: ExtensionViewController {
     }
     
     private func openLoginVC() {
-        navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
 //        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as?  LoginViewController {
 //            navigationController?.pushViewController(vc, animated: true)
 //        }

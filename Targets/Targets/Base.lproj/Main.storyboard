@@ -241,10 +241,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PG-w5-uWs">
+                                <rect key="frame" x="133.66666666666666" y="768" width="125.99999999999997" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bU3-tZ-dgD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cerrar sesión"/>
+                                <connections>
+                                    <action selector="onClickCloseSessionBtn:" destination="SkR-Gk-hCX" eventType="touchUpInside" id="cLq-84-hp4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UzD-Yd-Onc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1PG-w5-uWs" firstAttribute="bottom" secondItem="UzD-Yd-Onc" secondAttribute="bottom" id="Bf2-TK-Maa"/>
+                            <constraint firstItem="1PG-w5-uWs" firstAttribute="centerX" secondItem="Msq-7h-6Ws" secondAttribute="centerX" id="Q4Z-fF-kJk"/>
                             <constraint firstItem="fYM-nA-R74" firstAttribute="centerY" secondItem="Msq-7h-6Ws" secondAttribute="centerY" id="b5U-9Y-PaC"/>
                             <constraint firstItem="fYM-nA-R74" firstAttribute="centerX" secondItem="Msq-7h-6Ws" secondAttribute="centerX" id="ewN-BX-Zdk"/>
                         </constraints>
@@ -279,10 +292,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -60,7 +60,7 @@ class LoginViewController: ExtensionViewController {
     
     private func openRegisterVC() {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "RegisterVC") as? RegisterViewController {
-            navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
