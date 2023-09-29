@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A3C48D92AC659B700B71F86 /* ViewControllerTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C48D82AC659B700B71F86 /* ViewControllerTwoViewController.swift */; };
+		6A3C48DA2AC659B700B71F86 /* ViewControllerTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C48D82AC659B700B71F86 /* ViewControllerTwoViewController.swift */; };
+		6AD1F78D2AC643F3005915E3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD1F78C2AC643F3005915E3 /* FirebaseAuth */; };
+		6AD1F78F2AC6440D005915E3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD1F78E2AC6440D005915E3 /* FirebaseAuth */; };
 		6AEE963F2AC4A14400792893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE963E2AC4A14400792893 /* AppDelegate.swift */; };
 		6AEE96412AC4A14400792893 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE96402AC4A14400792893 /* SceneDelegate.swift */; };
 		6AEE96432AC4A14400792893 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE96422AC4A14400792893 /* ViewController.swift */; };
@@ -48,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A3C48D82AC659B700B71F86 /* ViewControllerTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwoViewController.swift; sourceTree = "<group>"; };
 		6AEE963B2AC4A14400792893 /* Targets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Targets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AEE963E2AC4A14400792893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AEE96402AC4A14400792893 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AEE969D2AC4F52000792893 /* FirebaseAnalytics in Frameworks */,
+				6AD1F78F2AC6440D005915E3 /* FirebaseAuth in Frameworks */,
 				6AEE969F2AC4F52000792893 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AEE96992AC4F4FA00792893 /* FirebaseAnalytics in Frameworks */,
+				6AD1F78D2AC643F3005915E3 /* FirebaseAuth in Frameworks */,
 				6AEE969B2AC4F4FA00792893 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 				6AEE96472AC4A14600792893 /* Assets.xcassets */,
 				6AEE96492AC4A14600792893 /* LaunchScreen.storyboard */,
 				6AEE964C2AC4A14600792893 /* Info.plist */,
+				6A3C48D82AC659B700B71F86 /* ViewControllerTwoViewController.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 			packageProductDependencies = (
 				6AEE969C2AC4F52000792893 /* FirebaseAnalytics */,
 				6AEE969E2AC4F52000792893 /* FirebaseCrashlytics */,
+				6AD1F78E2AC6440D005915E3 /* FirebaseAuth */,
 			);
 			productName = Targets;
 			productReference = 6AEE963B2AC4A14400792893 /* Targets.app */;
@@ -250,6 +259,7 @@
 			packageProductDependencies = (
 				6AEE96982AC4F4FA00792893 /* FirebaseAnalytics */,
 				6AEE969A2AC4F4FA00792893 /* FirebaseCrashlytics */,
+				6AD1F78C2AC643F3005915E3 /* FirebaseAuth */,
 			);
 			productName = Targets;
 			productReference = 6AEE967B2AC4A3A100792893 /* Targets_Dev.app */;
@@ -346,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A3C48D92AC659B700B71F86 /* ViewControllerTwoViewController.swift in Sources */,
 				6AEE96432AC4A14400792893 /* ViewController.swift in Sources */,
 				6AEE963F2AC4A14400792893 /* AppDelegate.swift in Sources */,
 				6AEE96412AC4A14400792893 /* SceneDelegate.swift in Sources */,
@@ -373,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A3C48DA2AC659B700B71F86 /* ViewControllerTwoViewController.swift in Sources */,
 				6AEE96702AC4A3A100792893 /* ViewController.swift in Sources */,
 				6AEE96712AC4A3A100792893 /* AppDelegate.swift in Sources */,
 				6AEE96722AC4A3A100792893 /* SceneDelegate.swift in Sources */,
@@ -787,6 +799,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6AD1F78C2AC643F3005915E3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AEE96972AC4F4FA00792893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		6AD1F78E2AC6440D005915E3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AEE96972AC4F4FA00792893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		6AEE96982AC4F4FA00792893 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6AEE96972AC4F4FA00792893 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
