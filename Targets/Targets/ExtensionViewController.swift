@@ -19,8 +19,8 @@ class ExtensionViewController: UIViewController {
         var storyBoard : UIStoryboard?
         var vc: UIViewController?
         
-        storyBoard = UIStoryboard(name: "Main", bundle:nil)
-        vc = storyBoard?.instantiateViewController(withIdentifier: "ViewController")
+        storyBoard = UIStoryboard(name: "menu", bundle:nil)
+        vc = storyBoard?.instantiateViewController(withIdentifier: "MenuID")
         UIApplication.shared.windows.first?.rootViewController = vc
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
