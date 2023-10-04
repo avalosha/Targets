@@ -29,7 +29,7 @@ class ExtensionViewController: UIViewController {
         var storyBoard : UIStoryboard?
         var vc: UIViewController?
         
-        storyBoard = UIStoryboard(name: "Main", bundle:nil)
+        storyBoard = UIStoryboard(name: "login", bundle:nil)
         vc = storyBoard?.instantiateViewController(withIdentifier: "LoginVC")
         let nav = UINavigationController(rootViewController: vc ?? UIViewController())
         UIApplication.shared.windows.first?.rootViewController = nav

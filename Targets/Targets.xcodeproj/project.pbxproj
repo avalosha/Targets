@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A23F3B62ACDF81300297414 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A23F3B52ACDF81300297414 /* login.storyboard */; };
+		6A23F3B72ACDF81300297414 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A23F3B52ACDF81300297414 /* login.storyboard */; };
 		6A3D48EE2AC74E4B00B6AFE1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D48ED2AC74E4B00B6AFE1 /* LoginViewController.swift */; };
 		6A3D48EF2AC74E4B00B6AFE1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D48ED2AC74E4B00B6AFE1 /* LoginViewController.swift */; };
 		6A3D48F12AC74E6200B6AFE1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D48F02AC74E6200B6AFE1 /* RegisterViewController.swift */; };
@@ -72,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A23F3B52ACDF81300297414 /* login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		6A3D48ED2AC74E4B00B6AFE1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6A3D48F02AC74E6200B6AFE1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6A3D48F62AC7503B00B6AFE1 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +224,7 @@
 			children = (
 				6A3D48F02AC74E6200B6AFE1 /* RegisterViewController.swift */,
 				6A3D48ED2AC74E4B00B6AFE1 /* LoginViewController.swift */,
+				6A23F3B52ACDF81300297414 /* login.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -389,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A23F3B62ACDF81300297414 /* login.storyboard in Resources */,
 				6AEE964B2AC4A14600792893 /* LaunchScreen.storyboard in Resources */,
 				6AFDEA222AC798C50032D31B /* home.storyboard in Resources */,
 				6AEE96902AC4C20500792893 /* GoogleService-Info.plist in Resources */,
@@ -417,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A23F3B72ACDF81300297414 /* login.storyboard in Resources */,
 				6AEE96752AC4A3A100792893 /* LaunchScreen.storyboard in Resources */,
 				6AFDEA232AC798C50032D31B /* home.storyboard in Resources */,
 				6AEE96932AC4C21400792893 /* GoogleService-Info.plist in Resources */,

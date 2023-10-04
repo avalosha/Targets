@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
         } else {
-            storyBoard = UIStoryboard(name: "Main", bundle:nil)
+            storyBoard = UIStoryboard(name: "login", bundle:nil)
             vc = storyBoard?.instantiateViewController(identifier: "LoginVC")
             
             guard let windowScene = (scene as? UIWindowScene), vc != nil else { return }
