@@ -22,12 +22,15 @@ class TabBarController: UITabBarController {
     }
     
     private func setupTaps() {
-        let storyboard = UIStoryboard(name: "profile", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier: "ProfileID")
-        let profile = self.createNav(title: "Perfil", image: UIImage(systemName: "person"), vc: destinationVC)
-        let example = self.createNav(title: "Example", image: UIImage(systemName: "clock"), vc: ExampleViewController())
+        let homeSB = UIStoryboard(name: "home", bundle: nil)
+        let homeVC = homeSB.instantiateViewController(withIdentifier: "HomeID")
+        let home = self.createNav(title: "Home", image: UIImage(systemName: "house"), vc: homeVC)
         
-        self.setViewControllers([profile, example], animated: true)
+        let exampleSB = UIStoryboard(name: "example", bundle: nil)
+        let exampleVC = exampleSB.instantiateViewController(withIdentifier: "ExampleID")
+        let example = self.createNav(title: "Example", image: UIImage(systemName: "clock"), vc: exampleVC)
+        
+        self.setViewControllers([home, example], animated: true)
     }
     
     private func setupTabItems() {

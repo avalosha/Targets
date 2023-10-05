@@ -108,17 +108,17 @@ enum MenuOptions: String, CaseIterable {
             case .home:
                 return "tabBar"
             case .music:
-                return "home"
+                return "example"
             case .film:
-                return "home"
+                return "example"
             case .book:
-                return "home"
+                return "example"
             case .person:
-                return "home"
+                return "profile"
             case .settings:
-                return "home"
+                return "example"
             case .facebook:
-                return "home"
+                return "example"
             }
         }
     }
@@ -129,17 +129,17 @@ enum MenuOptions: String, CaseIterable {
             case .home:
                 return "TabNavID"
             case .music:
-                return "HomeNavID"
+                return "ExampleNavID"
             case .film:
-                return "HomeNavID"
+                return "ExampleNavID"
             case .book:
-                return "HomeNavID"
+                return "ExampleNavID"
             case .person:
-                return "HomeNavID"
+                return "ProfileNavID"
             case .settings:
-                return "HomeNavID"
+                return "ExampleNavID"
             case .facebook:
-                return "HomeNavID"
+                return "ExampleNavID"
             }
         }
     }

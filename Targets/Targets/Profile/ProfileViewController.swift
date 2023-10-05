@@ -9,11 +9,14 @@ import UIKit
 import FirebaseAuth
 
 class ProfileViewController: ExtensionViewController {
+    
+    @IBOutlet var sideMenuBtn: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        sideMenuBtn.target = revealViewController()
+        sideMenuBtn.action = #selector(revealViewController()?.revealSideMenu)
     }
 
     private func closeSessionWithFirebase() {
