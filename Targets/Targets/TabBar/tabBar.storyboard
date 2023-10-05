@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sli-58-ILy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IPp-nB-BdJ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,46 +9,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home (deprecated)-->
+        <!--Targets-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeID" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Targets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TabBarID" id="Y6W-OH-hqX" customClass="TabBarController" customModule="Targets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home (deprecated)" id="kH6-Y5-NoY">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon_menu" id="gM8-kS-ewL">
+                    <navigationItem key="navigationItem" title="Targets" id="PuZ-gV-v6v">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon_menu" id="CHV-LU-Ewf">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="sideMenuBtn" destination="gM8-kS-ewL" id="bdi-EM-rHH"/>
+                        <outlet property="sideMenuBtn" destination="CHV-LU-Ewf" id="CY4-ia-9WE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982.4427480916029" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="2046.564885496183" y="11.971830985915494"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="M3R-Zg-ph2">
+        <scene sceneID="ODE-aV-q3P">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavID" automaticallyAdjustsScrollViewInsets="NO" id="Sli-58-ILy" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TabNavID" automaticallyAdjustsScrollViewInsets="NO" id="IPp-nB-BdJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vf7-1i-MHr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cjc-GR-cuq">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="iMi-jY-RtB"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="fHt-gM-sgl"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lMc-hp-KZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEG-QJ-iAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055.7251908396945" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="1119.8473282442749" y="11.971830985915494"/>
         </scene>
     </scenes>
     <resources>

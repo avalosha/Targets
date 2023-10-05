@@ -8,7 +8,6 @@
 import UIKit
 import Firebase
 import Combine
-import FirebaseAuth
 
 class ViewController: ExtensionViewController {
     
@@ -29,19 +28,6 @@ class ViewController: ExtensionViewController {
         
     }
     
-    private func closeSessionWithFirebase() {
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-            openInitialViewController()
-        } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
-        }
-    }
-
-    @IBAction func onClickCloseSessionBtn(_ sender: Any) {
-        closeSessionWithFirebase()
-    }
 }
 
 extension ViewController {
@@ -51,7 +37,7 @@ extension ViewController {
         // Crea un editor que emite un valor cuando se publica la notificación personalizada
         let buttonTapPublisher = NotificationCenter.default.publisher(for: customNotification)
         // Crea un suscriptor usando el operador receptor
-        let buttonTapSuscriber = buttonTapPublisher.sink { _ in
+        _ = buttonTapPublisher.sink { _ in
             print("Boton presionado!")
         }
         // Emule un evento de pulsación de botón publicando la notificación personalizada
@@ -66,13 +52,12 @@ extension ViewController {
             return number * number
         }
         // Crea un suscriptor para recibir e imprimer los numeros elevados al cuadrado
-        let subscriber = squaredNumbersPublisher.sink { squaredNumber in
+        _ = squaredNumbersPublisher.sink { squaredNumber in
             print("Squared: \(squaredNumber)")
         }
     }
     
     private func useCombineWithRealData() {
-        let url = URL(fileURLWithPath: "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0")
-
+//        let url = URL(fileURLWithPath: "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0")
     }
 }

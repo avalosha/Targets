@@ -15,6 +15,16 @@
 		6A3D48F22AC74E6200B6AFE1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D48F02AC74E6200B6AFE1 /* RegisterViewController.swift */; };
 		6A3D48F72AC7503B00B6AFE1 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D48F62AC7503B00B6AFE1 /* ExtensionViewController.swift */; };
 		6A3D48F82AC7503B00B6AFE1 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D48F62AC7503B00B6AFE1 /* ExtensionViewController.swift */; };
+		6AB232072ACF5589002577D2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB232062ACF5589002577D2 /* TabBarController.swift */; };
+		6AB232082ACF5589002577D2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB232062ACF5589002577D2 /* TabBarController.swift */; };
+		6AB2320B2ACF5749002577D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB2320A2ACF5749002577D2 /* ProfileViewController.swift */; };
+		6AB2320C2ACF5749002577D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB2320A2ACF5749002577D2 /* ProfileViewController.swift */; };
+		6AB2320E2ACF5773002577D2 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB2320D2ACF5773002577D2 /* ExampleViewController.swift */; };
+		6AB2320F2ACF5773002577D2 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB2320D2ACF5773002577D2 /* ExampleViewController.swift */; };
+		6AB232112ACF58DF002577D2 /* tabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB232102ACF58DF002577D2 /* tabBar.storyboard */; };
+		6AB232122ACF58DF002577D2 /* tabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB232102ACF58DF002577D2 /* tabBar.storyboard */; };
+		6AB232162ACF7276002577D2 /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB232152ACF7276002577D2 /* profile.storyboard */; };
+		6AB232172ACF7276002577D2 /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB232152ACF7276002577D2 /* profile.storyboard */; };
 		6AD1F78D2AC643F3005915E3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD1F78C2AC643F3005915E3 /* FirebaseAuth */; };
 		6AD1F78F2AC6440D005915E3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD1F78E2AC6440D005915E3 /* FirebaseAuth */; };
 		6AEE963F2AC4A14400792893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE963E2AC4A14400792893 /* AppDelegate.swift */; };
@@ -78,6 +88,11 @@
 		6A3D48ED2AC74E4B00B6AFE1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6A3D48F02AC74E6200B6AFE1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6A3D48F62AC7503B00B6AFE1 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		6AB232062ACF5589002577D2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		6AB2320A2ACF5749002577D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6AB2320D2ACF5773002577D2 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		6AB232102ACF58DF002577D2 /* tabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tabBar.storyboard; sourceTree = "<group>"; };
+		6AB232152ACF7276002577D2 /* profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = profile.storyboard; sourceTree = "<group>"; };
 		6AEE963B2AC4A14400792893 /* Targets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Targets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AEE963E2AC4A14400792893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AEE96402AC4A14400792893 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +158,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AB232052ACF556C002577D2 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6AB232062ACF5589002577D2 /* TabBarController.swift */,
+				6AB232102ACF58DF002577D2 /* tabBar.storyboard */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		6AB232092ACF5724002577D2 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6AB2320D2ACF5773002577D2 /* ExampleViewController.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		6AB232132ACF7247002577D2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6AB2320A2ACF5749002577D2 /* ProfileViewController.swift */,
+				6AB232152ACF7276002577D2 /* profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		6AEE96322AC4A14400792893 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +209,9 @@
 		6AEE963D2AC4A14400792893 /* Targets */ = {
 			isa = PBXGroup;
 			children = (
+				6AB232132ACF7247002577D2 /* Profile */,
+				6AB232092ACF5724002577D2 /* Others */,
+				6AB232052ACF556C002577D2 /* TabBar */,
 				6AFDEA202AC798A90032D31B /* Home */,
 				6AFDEA062AC7737C0032D31B /* Menu */,
 				6AFDEA052AC773510032D31B /* Login */,
@@ -395,12 +439,14 @@
 			files = (
 				6A23F3B62ACDF81300297414 /* login.storyboard in Resources */,
 				6AEE964B2AC4A14600792893 /* LaunchScreen.storyboard in Resources */,
+				6AB232162ACF7276002577D2 /* profile.storyboard in Resources */,
 				6AFDEA222AC798C50032D31B /* home.storyboard in Resources */,
 				6AEE96902AC4C20500792893 /* GoogleService-Info.plist in Resources */,
 				6AEE96952AC4E56800792893 /* Assets.xcassets in Resources */,
 				6AFDEA082AC773BA0032D31B /* menu.storyboard in Resources */,
 				6AEE96462AC4A14400792893 /* Main.storyboard in Resources */,
 				6AFDEA1B2AC78E9E0032D31B /* SideMenuCell.xib in Resources */,
+				6AB232112ACF58DF002577D2 /* tabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,12 +470,14 @@
 			files = (
 				6A23F3B72ACDF81300297414 /* login.storyboard in Resources */,
 				6AEE96752AC4A3A100792893 /* LaunchScreen.storyboard in Resources */,
+				6AB232172ACF7276002577D2 /* profile.storyboard in Resources */,
 				6AFDEA232AC798C50032D31B /* home.storyboard in Resources */,
 				6AEE96932AC4C21400792893 /* GoogleService-Info.plist in Resources */,
 				6AEE96962AC4E57C00792893 /* Assets.xcassets in Resources */,
 				6AFDEA092AC773BA0032D31B /* menu.storyboard in Resources */,
 				6AEE96772AC4A3A100792893 /* Main.storyboard in Resources */,
 				6AFDEA1C2AC78E9E0032D31B /* SideMenuCell.xib in Resources */,
+				6AB232122ACF58DF002577D2 /* tabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +497,9 @@
 				6AFDEA1E2AC796EF0032D31B /* ExtensionUIViewController.swift in Sources */,
 				6AFDEA252AC7994D0032D31B /* HomeViewController.swift in Sources */,
 				6AEE963F2AC4A14400792893 /* AppDelegate.swift in Sources */,
+				6AB232072ACF5589002577D2 /* TabBarController.swift in Sources */,
+				6AB2320B2ACF5749002577D2 /* ProfileViewController.swift in Sources */,
+				6AB2320E2ACF5773002577D2 /* ExampleViewController.swift in Sources */,
 				6AEE96412AC4A14400792893 /* SceneDelegate.swift in Sources */,
 				6AFDEA0E2AC773F90032D31B /* MainViewController.swift in Sources */,
 			);
@@ -484,6 +535,9 @@
 				6AFDEA1F2AC796EF0032D31B /* ExtensionUIViewController.swift in Sources */,
 				6AFDEA262AC7994D0032D31B /* HomeViewController.swift in Sources */,
 				6AEE96712AC4A3A100792893 /* AppDelegate.swift in Sources */,
+				6AB232082ACF5589002577D2 /* TabBarController.swift in Sources */,
+				6AB2320C2ACF5749002577D2 /* ProfileViewController.swift in Sources */,
+				6AB2320F2ACF5773002577D2 /* ExampleViewController.swift in Sources */,
 				6AEE96722AC4A3A100792893 /* SceneDelegate.swift in Sources */,
 				6AFDEA0F2AC773F90032D31B /* MainViewController.swift in Sources */,
 			);

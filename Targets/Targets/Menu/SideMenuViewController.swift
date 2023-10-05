@@ -77,7 +77,7 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
 
         // Highlighted color
         let myCustomSelectionColorView = UIView()
-        myCustomSelectionColorView.backgroundColor = #colorLiteral(red: 0.6196078431, green: 0.1098039216, blue: 0.2509803922, alpha: 1)
+        myCustomSelectionColorView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         cell.selectedBackgroundView = myCustomSelectionColorView
         
         return cell
@@ -106,7 +106,7 @@ enum MenuOptions: String, CaseIterable {
         get {
             switch self {
             case .home:
-                return "home"
+                return "tabBar"
             case .music:
                 return "home"
             case .film:
@@ -127,7 +127,7 @@ enum MenuOptions: String, CaseIterable {
         get {
             switch self {
             case .home:
-                return "HomeNavID"
+                return "TabNavID"
             case .music:
                 return "HomeNavID"
             case .film:

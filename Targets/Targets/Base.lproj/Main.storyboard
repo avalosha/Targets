@@ -16,33 +16,8 @@
                     <view key="view" contentMode="scaleToFill" id="Msq-7h-6Ws">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTRASTE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYM-nA-R74">
-                                <rect key="frame" x="145.66666666666666" y="414" width="102" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PG-w5-uWs">
-                                <rect key="frame" x="133.66666666666666" y="768" width="125.99999999999997" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="bU3-tZ-dgD"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Cerrar sesión"/>
-                                <connections>
-                                    <action selector="onClickCloseSessionBtn:" destination="SkR-Gk-hCX" eventType="touchUpInside" id="cLq-84-hp4"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UzD-Yd-Onc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="1PG-w5-uWs" firstAttribute="bottom" secondItem="UzD-Yd-Onc" secondAttribute="bottom" id="Bf2-TK-Maa"/>
-                            <constraint firstItem="1PG-w5-uWs" firstAttribute="centerX" secondItem="Msq-7h-6Ws" secondAttribute="centerX" id="Q4Z-fF-kJk"/>
-                            <constraint firstItem="fYM-nA-R74" firstAttribute="centerY" secondItem="Msq-7h-6Ws" secondAttribute="centerY" id="b5U-9Y-PaC"/>
-                            <constraint firstItem="fYM-nA-R74" firstAttribute="centerX" secondItem="Msq-7h-6Ws" secondAttribute="centerX" id="ewN-BX-Zdk"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6mj-N1-bnE"/>
                 </viewController>

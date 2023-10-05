@@ -79,7 +79,7 @@ class MainViewController: UIViewController {
         ])
         
         // Default Main View Controller
-        showViewController(viewController: UINavigationController.self, storyboard: "home" ,storyboardId: "HomeNavID")
+        showViewController(viewController: UINavigationController.self, storyboard: "tabBar" ,storyboardId: "TabNavID")
     }
     
     private func showViewController<T: UIViewController>(viewController: T.Type, storyboard: String, storyboardId: String) -> () {
