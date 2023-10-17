@@ -9,13 +9,25 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var firstCollectionView: UICollectionView!
+    
+    private var digimonData: [Content] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupCollectionView()
+        
         getDigimons()
     }
+    
+    private func setupCollectionView() {
+        firstCollectionView.delegate = self
+        firstCollectionView.dataSource = self
+        HomeCell.registerCell(collectionView: firstCollectionView)
+    }
 
-    public func getDigimons() {
+    private func getDigimons() {
         let params: [String: Any] = ["page": 1]
         let res = API.makeURLRequest(end: .digimon, parameters: params)
         
@@ -27,9 +39,33 @@ class HomeViewController: UIViewController {
             
             guard let response: DigimonResponse = data?.decodeData() else { return }
             dump(response)
-            self?.view.backgroundColor = .green
+            self?.digimonData = response.content
+            self?.firstCollectionView.reloadData()
         }
     }
+    
+}
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return digimonData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCell.identifierCell, for: indexPath) as! HomeCell
+        let data = digimonData[indexPath.item]
+        cell.setupCell(with: data)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = (self.firstCollectionView.frame.size.width - CGFloat(1 * 10)) / CGFloat(2)
+        print("W: ",width," H: 180")
+        return CGSize(width: width, height: 220)
+    }
+    
 }
 
 // MARK: - DigimonResponse

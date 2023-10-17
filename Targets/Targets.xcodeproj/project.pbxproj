@@ -15,6 +15,10 @@
 		6A3D48F22AC74E6200B6AFE1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D48F02AC74E6200B6AFE1 /* RegisterViewController.swift */; };
 		6A3D48F72AC7503B00B6AFE1 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D48F62AC7503B00B6AFE1 /* ExtensionViewController.swift */; };
 		6A3D48F82AC7503B00B6AFE1 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3D48F62AC7503B00B6AFE1 /* ExtensionViewController.swift */; };
+		6AABF9C92ADE05D800D747DB /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AABF9C72ADE05D800D747DB /* HomeCell.swift */; };
+		6AABF9CA2ADE05D800D747DB /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AABF9C72ADE05D800D747DB /* HomeCell.swift */; };
+		6AABF9CB2ADE05D800D747DB /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AABF9C82ADE05D800D747DB /* HomeCell.xib */; };
+		6AABF9CC2ADE05D800D747DB /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AABF9C82ADE05D800D747DB /* HomeCell.xib */; };
 		6AB232072ACF5589002577D2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB232062ACF5589002577D2 /* TabBarController.swift */; };
 		6AB232082ACF5589002577D2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB232062ACF5589002577D2 /* TabBarController.swift */; };
 		6AB2320B2ACF5749002577D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB2320A2ACF5749002577D2 /* ProfileViewController.swift */; };
@@ -100,6 +104,8 @@
 		6A3D48ED2AC74E4B00B6AFE1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6A3D48F02AC74E6200B6AFE1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6A3D48F62AC7503B00B6AFE1 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		6AABF9C72ADE05D800D747DB /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		6AABF9C82ADE05D800D747DB /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		6AB232062ACF5589002577D2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6AB2320A2ACF5749002577D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6AB2320D2ACF5773002577D2 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +183,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AABF9C62ADE05A100D747DB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6AABF9C72ADE05D800D747DB /* HomeCell.swift */,
+				6AABF9C82ADE05D800D747DB /* HomeCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		6AB232052ACF556C002577D2 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +276,7 @@
 		6AEE963D2AC4A14400792893 /* Targets */ = {
 			isa = PBXGroup;
 			children = (
+				6AABF9C62ADE05A100D747DB /* Cells */,
 				6AB232222ACF8742002577D2 /* Modules */,
 				6AB232212ACF872F002577D2 /* Request */,
 				6AB2321B2ACF7F76002577D2 /* Extensions */,
@@ -498,6 +514,7 @@
 				6AEE96462AC4A14400792893 /* Main.storyboard in Resources */,
 				6AFDEA1B2AC78E9E0032D31B /* SideMenuCell.xib in Resources */,
 				6AB232192ACF7D59002577D2 /* example.storyboard in Resources */,
+				6AABF9CB2ADE05D800D747DB /* HomeCell.xib in Resources */,
 				6AB232112ACF58DF002577D2 /* tabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +547,7 @@
 				6AEE96772AC4A3A100792893 /* Main.storyboard in Resources */,
 				6AFDEA1C2AC78E9E0032D31B /* SideMenuCell.xib in Resources */,
 				6AB2321A2ACF7D59002577D2 /* example.storyboard in Resources */,
+				6AABF9CC2ADE05D800D747DB /* HomeCell.xib in Resources */,
 				6AB232122ACF58DF002577D2 /* tabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +561,7 @@
 			files = (
 				6A3D48EE2AC74E4B00B6AFE1 /* LoginViewController.swift in Sources */,
 				6A3D48F12AC74E6200B6AFE1 /* RegisterViewController.swift in Sources */,
+				6AABF9C92ADE05D800D747DB /* HomeCell.swift in Sources */,
 				6A3D48F72AC7503B00B6AFE1 /* ExtensionViewController.swift in Sources */,
 				6AEE96432AC4A14400792893 /* ViewController.swift in Sources */,
 				6AB232242ACF881A002577D2 /* API.swift in Sources */,
@@ -585,6 +604,7 @@
 			files = (
 				6A3D48EF2AC74E4B00B6AFE1 /* LoginViewController.swift in Sources */,
 				6A3D48F22AC74E6200B6AFE1 /* RegisterViewController.swift in Sources */,
+				6AABF9CA2ADE05D800D747DB /* HomeCell.swift in Sources */,
 				6A3D48F82AC7503B00B6AFE1 /* ExtensionViewController.swift in Sources */,
 				6AEE96702AC4A3A100792893 /* ViewController.swift in Sources */,
 				6AB232252ACF881A002577D2 /* API.swift in Sources */,
