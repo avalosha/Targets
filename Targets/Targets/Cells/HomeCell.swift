@@ -28,7 +28,7 @@ class HomeCell: UICollectionViewCell {
     
     public func setupCell(with data: Content) {
         titleLbl.text = data.name
-        mainImgView.download(from: data.image, contentMode: .scaleAspectFill)
+        mainImgView.download(from: data.image ?? "", contentMode: .scaleAspectFill)
     }
 
 }

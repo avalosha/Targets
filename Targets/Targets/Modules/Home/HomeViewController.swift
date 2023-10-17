@@ -13,14 +13,16 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var heightContainerOne: NSLayoutConstraint!
     
+    private let viewModel = HomeViewModel()
     private var digimonData: [Content] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCollectionView()
+        setupBindings()
         
-        getDigimons()
+        viewModel.getDigimons()
     }
     
     private func setupCollectionView() {
@@ -28,24 +30,20 @@ class HomeViewController: UIViewController {
         firstCollectionView.dataSource = self
         HomeCell.registerCell(collectionView: firstCollectionView)
     }
-
-    private func getDigimons() {
-        let params: [String: Any] = ["page": 1]
-        let res = API.makeURLRequest(end: .digimon, parameters: params)
+    
+    private func setupBindings() {
+        viewModel.statusCode.bind { [weak self] code in
+            print("ErrorCode: ",code.rawValue)
+        }
         
-        API.request(url: res) { [weak self] (data, code) in
-            if code != .success {
-                print("Code: ",code.rawValue," Message: ",code.message)
-                self?.view.backgroundColor = .red
+        viewModel.digimonResponse.bind { [weak self] response in
+            if let data = response.content {
+                self?.digimonData.append(contentsOf: data)
+                self?.firstCollectionView.reloadData()
             }
-            
-            guard let response: DigimonResponse = data?.decodeData() else { return }
-            dump(response)
-            self?.digimonData = response.content
-            self?.firstCollectionView.reloadData()
         }
     }
-    
+
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -74,28 +72,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if height > 0 {
             self.heightContainerOne.constant = self.firstCollectionView.collectionViewLayout.collectionViewContentSize.height + 44
         }
-        print("H: ",height)
     }
     
-}
-
-// MARK: - DigimonResponse
-struct DigimonResponse: Codable {
-    let content: [Content]
-    let pageable: Pageable
-}
-
-// MARK: - Content
-struct Content: Codable {
-    let id: Int
-    let name: String
-    let href: String
-    let image: String
-}
-
-// MARK: - Pageable
-struct Pageable: Codable {
-    let currentPage, elementsOnPage, totalElements, totalPages: Int
-    let previousPage: String
-    let nextPage: String
 }
