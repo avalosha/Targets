@@ -8,8 +8,8 @@
 import UIKit
 
 class HomeCell: UICollectionViewCell {
-
-    @IBOutlet weak var mainImgView: UIImageView!
+    
+    @IBOutlet weak var mainImgView: CustomImageView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var secondImgView: UIImageView!
     
@@ -28,6 +28,7 @@ class HomeCell: UICollectionViewCell {
     
     public func setupCell(with data: Content) {
         titleLbl.text = data.name
+        mainImgView.download(from: data.image, contentMode: .scaleAspectFill)
     }
 
 }

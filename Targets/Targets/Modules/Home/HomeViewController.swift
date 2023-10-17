@@ -11,6 +11,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var firstCollectionView: UICollectionView!
     
+    @IBOutlet weak var heightContainerOne: NSLayoutConstraint!
+    
     private var digimonData: [Content] = []
     
     override func viewDidLoad() {
@@ -62,8 +64,17 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = (self.firstCollectionView.frame.size.width - CGFloat(1 * 10)) / CGFloat(2)
-        print("W: ",width," H: 180")
-        return CGSize(width: width, height: 220)
+        return CGSize(width: width, height: 160)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        let height = self.firstCollectionView.collectionViewLayout.collectionViewContentSize.height
+        if height > 0 {
+            self.heightContainerOne.constant = self.firstCollectionView.collectionViewLayout.collectionViewContentSize.height + 44
+        }
+        print("H: ",height)
     }
     
 }
