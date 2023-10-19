@@ -35,14 +35,31 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJH-VY-rtE">
+                                                                <rect key="frame" x="293" y="0.0" width="75" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="75" id="zMB-6D-zCE"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Ver más">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClickSeeMoreBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Qa9-mq-QXh"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.95598209980000004" green="1" blue="0.2453383506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstItem="lTQ-jQ-CSs" firstAttribute="top" secondItem="57a-1v-4MW" secondAttribute="top" id="94u-b7-SFE"/>
                                                             <constraint firstAttribute="trailing" secondItem="lTQ-jQ-CSs" secondAttribute="trailing" id="NgY-ef-AHS"/>
                                                             <constraint firstAttribute="bottom" secondItem="lTQ-jQ-CSs" secondAttribute="bottom" id="Rwo-qq-F2l"/>
+                                                            <constraint firstAttribute="trailing" secondItem="OJH-VY-rtE" secondAttribute="trailing" constant="5" id="c7p-mY-quj"/>
+                                                            <constraint firstAttribute="bottom" secondItem="OJH-VY-rtE" secondAttribute="bottom" id="kuV-ne-SNA"/>
                                                             <constraint firstAttribute="height" constant="34" id="qII-NM-bka"/>
                                                             <constraint firstItem="lTQ-jQ-CSs" firstAttribute="leading" secondItem="57a-1v-4MW" secondAttribute="leading" id="ral-t8-mE9"/>
+                                                            <constraint firstItem="OJH-VY-rtE" firstAttribute="top" secondItem="57a-1v-4MW" secondAttribute="top" id="ub1-th-IKo"/>
                                                         </constraints>
                                                     </view>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uqR-0a-bcI">
@@ -103,11 +120,22 @@
                     <connections>
                         <outlet property="firstCollectionView" destination="uqR-0a-bcI" id="1nn-w4-qiB"/>
                         <outlet property="heightContainerOne" destination="UqK-Ow-1ko" id="Vs7-nh-qz6"/>
+                        <segue destination="hUr-ra-REu" kind="show" identifier="segueList" id="fhS-kQ-YLr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1982.4427480916029" y="-34.507042253521128"/>
+        </scene>
+        <!--ListID-->
+        <scene sceneID="Tw5-LC-f3P">
+            <objects>
+                <viewControllerPlaceholder storyboardName="list" referencedIdentifier="ListID" id="hUr-ra-REu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eXc-1x-ZAI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gl3-i2-7n3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2625" y="-134"/>
         </scene>
     </scenes>
     <resources>

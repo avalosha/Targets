@@ -44,6 +44,24 @@ class HomeViewController: UIViewController {
         }
     }
 
+    @IBAction func onClickSeeMoreBtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "segueList", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Reiniciar navigation bar con el scroll
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.hidesBarsOnSwipe = false
+        self.hidesBottomBarWhenPushed = true
+        
+        if segue.identifier == "segueList" {
+            if let vc = segue.destination as? ListViewController {
+                vc.fromHome = true
+                navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            }
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
