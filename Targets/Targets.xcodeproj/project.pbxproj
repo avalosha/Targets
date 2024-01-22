@@ -236,6 +236,13 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		6AA144482B5EE02B00B0FF6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6AABF9C62ADE05A100D747DB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +339,7 @@
 		6AEE963D2AC4A14400792893 /* Targets */ = {
 			isa = PBXGroup;
 			children = (
+				6AA144482B5EE02B00B0FF6C /* Model */,
 				6A4E619A2ADF4A1A009B4BF8 /* Helpers&Utils */,
 				6A4E61932ADF21D9009B4BF8 /* Customs */,
 				6AABF9C62ADE05A100D747DB /* Cells */,

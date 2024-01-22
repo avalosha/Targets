@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wob-Fb-fsN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wob-Fb-fsN">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,12 +25,68 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTa-3T-GXk">
+                                <rect key="frame" x="25" y="153" width="50" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7cZ-no-2At"/>
+                                    <constraint firstAttribute="width" constant="50" id="egf-Qs-TnO"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="photo.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickShowBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="N9n-C4-CFY"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGg-EV-wLc">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZP-lA-iWL">
+                                        <rect key="frame" x="336" y="223" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="9id-BM-l7t"/>
+                                            <constraint firstAttribute="width" constant="32" id="eX0-uD-RQK"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="onClickHideBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MVn-k2-QsE"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdW-xL-6XG">
+                                        <rect key="frame" x="91.666666666666686" y="35" width="210" height="210"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="CdW-xL-6XG" secondAttribute="height" multiplier="1:1" id="32W-y4-UlA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="CdW-xL-6XG" firstAttribute="centerX" secondItem="LGg-EV-wLc" secondAttribute="centerX" id="C6y-2m-QHp"/>
+                                    <constraint firstItem="CdW-xL-6XG" firstAttribute="height" secondItem="LGg-EV-wLc" secondAttribute="height" multiplier="0.75" id="CFL-Q7-Xw4"/>
+                                    <constraint firstAttribute="height" constant="280" id="JX5-kN-pcZ"/>
+                                    <constraint firstItem="CdW-xL-6XG" firstAttribute="centerY" secondItem="LGg-EV-wLc" secondAttribute="centerY" id="RVC-Ea-9UM"/>
+                                    <constraint firstAttribute="trailing" secondItem="tZP-lA-iWL" secondAttribute="trailing" constant="25" id="Z8K-B3-XGm"/>
+                                    <constraint firstItem="tZP-lA-iWL" firstAttribute="bottom" secondItem="LGg-EV-wLc" secondAttribute="bottom" constant="-25" id="asW-T9-gMb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jQ6-bs-b8c" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="3qw-xR-MRh"/>
+                            <constraint firstItem="YTa-3T-GXk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="4Yr-53-WZY"/>
+                            <constraint firstItem="LGg-EV-wLc" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="inj-rZ-N9v"/>
+                            <constraint firstItem="LGg-EV-wLc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kBS-Gq-AT0"/>
                             <constraint firstItem="jQ6-bs-b8c" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="m11-iG-WSx"/>
+                            <constraint firstItem="YTa-3T-GXk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="oXN-Sj-OlV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LGg-EV-wLc" secondAttribute="trailing" id="qgh-IS-fy8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Example" id="C1b-pm-Lap">
@@ -37,6 +95,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="blackView" destination="LGg-EV-wLc" id="07j-eU-oJE"/>
+                        <outlet property="showBtn" destination="YTa-3T-GXk" id="urV-N2-AlD"/>
                         <outlet property="sideMenuBtn" destination="J1Z-wL-CHw" id="oae-gQ-JmC"/>
                     </connections>
                 </viewController>
@@ -65,6 +125,11 @@
     </scenes>
     <resources>
         <image name="icon_menu" width="25" height="25"/>
+        <image name="photo.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

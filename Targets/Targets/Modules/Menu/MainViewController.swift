@@ -129,6 +129,7 @@ class MainViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: .layoutSubviews, animations: {
             if self.revealSideMenuOnTop {
                 self.sideMenuTrailingConstraint.constant = targetPosition
+                print("CONSTRAINT ACTUAL = ",self.sideMenuTrailingConstraint.constant)
                 self.view.layoutIfNeeded()
             }
             else {
@@ -251,10 +252,18 @@ extension MainViewController: UIGestureRecognizerDelegate {
 
                     let alpha = percentage >= 0.6 ? 0.6 : percentage
                     self.sideMenuShadowView.alpha = alpha
+                    
+                    print("______________________________")
+                    print("POS= ",position)
+                    print("VEL= ",velocity)
+                    print("PanBASE= ",panBaseLocation)
+                    print("SideMenuWIDHT= ",sideMenuRevealWidth)
+                    print("xLOCATION= ",xLocation)
 
                     // Move side menu while dragging
-                    if xLocation <= self.sideMenuRevealWidth {
+                    if xLocation >= self.sideMenuRevealWidth {
                         self.sideMenuTrailingConstraint.constant = xLocation - self.sideMenuRevealWidth
+                        print("CONSTRAINT= ",sideMenuTrailingConstraint.constant)
                     }
                 }
                 else {

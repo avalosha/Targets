@@ -98,6 +98,10 @@ class ListViewController: UIViewController {
             navigationController?.popViewController(animated: true)
         }
     }
+    
+    private func openDetail(with index: Int) {
+        
+    }
 
 }
 
@@ -118,6 +122,10 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let width = self.listCollectionView.frame.size.width
         return CGSize(width: width, height: 120)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        openDetail(with: indexPath.item)
     }
     
 }
