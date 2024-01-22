@@ -221,6 +221,9 @@
 		6A4E619A2ADF4A1A009B4BF8 /* Helpers&Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6AB2321B2ACF7F76002577D2 /* Extensions */,
+				6AB232212ACF872F002577D2 /* Request */,
+				6A4E61932ADF21D9009B4BF8 /* Customs */,
 				6A4E619B2ADF4A3C009B4BF8 /* Observable.swift */,
 			);
 			path = "Helpers&Utils";
@@ -236,11 +239,26 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		6AA144482B5EE02B00B0FF6C /* Model */ = {
+		6AA144682B5EFEBB00B0FF6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6AEE967C2AC4A3A100792893 /* Targets_Dev-Info.plist */,
+				6AEE963E2AC4A14400792893 /* AppDelegate.swift */,
+				6AEE96402AC4A14400792893 /* SceneDelegate.swift */,
+				6AEE96422AC4A14400792893 /* ViewController.swift */,
+				6AEE96442AC4A14400792893 /* Main.storyboard */,
+				6AEE96472AC4A14600792893 /* Assets.xcassets */,
+				6AEE96492AC4A14600792893 /* LaunchScreen.storyboard */,
+				6AEE964C2AC4A14600792893 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6AA1446F2B5F004400B0FF6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6AABF9C62ADE05A100D747DB /* Cells */ = {
@@ -304,6 +322,7 @@
 		6AB232222ACF8742002577D2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6AB232052ACF556C002577D2 /* TabBar */,
 				6A4E61A12ADF5083009B4BF8 /* List */,
 				6AB232132ACF7247002577D2 /* Profile */,
 				6AB232092ACF5724002577D2 /* Example */,
@@ -321,7 +340,7 @@
 				6AEE96542AC4A14700792893 /* TargetsTests */,
 				6AEE965E2AC4A14700792893 /* TargetsUITests */,
 				6AEE963C2AC4A14400792893 /* Products */,
-				6AEE967C2AC4A3A100792893 /* Targets_Dev-Info.plist */,
+				6AA1446F2B5F004400B0FF6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -339,23 +358,12 @@
 		6AEE963D2AC4A14400792893 /* Targets */ = {
 			isa = PBXGroup;
 			children = (
-				6AA144482B5EE02B00B0FF6C /* Model */,
+				6AA144682B5EFEBB00B0FF6C /* Resources */,
 				6A4E619A2ADF4A1A009B4BF8 /* Helpers&Utils */,
-				6A4E61932ADF21D9009B4BF8 /* Customs */,
 				6AABF9C62ADE05A100D747DB /* Cells */,
 				6AB232222ACF8742002577D2 /* Modules */,
-				6AB232212ACF872F002577D2 /* Request */,
-				6AB2321B2ACF7F76002577D2 /* Extensions */,
-				6AB232052ACF556C002577D2 /* TabBar */,
 				6AEE96912AC4C21400792893 /* Dev */,
 				6AEE968E2AC4C20500792893 /* Prod */,
-				6AEE963E2AC4A14400792893 /* AppDelegate.swift */,
-				6AEE96402AC4A14400792893 /* SceneDelegate.swift */,
-				6AEE96422AC4A14400792893 /* ViewController.swift */,
-				6AEE96442AC4A14400792893 /* Main.storyboard */,
-				6AEE96472AC4A14600792893 /* Assets.xcassets */,
-				6AEE96492AC4A14600792893 /* LaunchScreen.storyboard */,
-				6AEE964C2AC4A14600792893 /* Info.plist */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
