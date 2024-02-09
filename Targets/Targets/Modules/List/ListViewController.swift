@@ -121,7 +121,7 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = self.listCollectionView.frame.size.width
-        return CGSize(width: width, height: 120)
+        return CGSize(width: width, height: 140)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
