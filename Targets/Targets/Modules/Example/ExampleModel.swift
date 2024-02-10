@@ -7,39 +7,100 @@
 
 import Foundation
 
-struct Fee: Equatable {
-    
-    var category: Category
-    var amount: Double
-    
-    enum Category: Equatable {
-        case enrollment
-        case course(String)
+protocol Identifiable {
+    var id: String { get set}
+    func identify()
+}
+
+extension Identifiable {
+    func identify() {
+        print("My ID is ",id)
     }
 }
 
-class TestConstants {
-    static let someString = "String"
-    static let someFeeCategory = Fee.Category.enrollment
-    static let someDouble = 1.0
-    static let someOtherDouble = 2.0
-    static let someOtherFeeCategory = Fee.Category.course("String")
+struct User: Identifiable {
+    var id: String
 }
 
-struct Invoice: Equatable {
-    var fees = [Fee]()
-    var totalPayableAmount: Double {
-        fees.reduce(0) { runningTotal, fee in
-            runningTotal + fee.amount
-        }
+// *****************************************
+
+protocol Vehicle {
+    var numberOfWheels: Int { get }
+    func start()
+    func stop()
+}
+
+extension Vehicle {
+    func start() {
+        print("Vehicle starting...")
+    }
+}
+
+struct Car: Vehicle {
+    var numberOfWheels: Int { return 4 }
+    
+    func start() {
+        print("Car starting...")
     }
     
-    mutating func addFee(_ fee:Fee) {
-        fees.append(fee)
+    func stop() {
+        print("Car stopping...")
     }
+    
 }
 
-struct Course: Equatable {
-    var title: String
-    var credits: Double
+struct MotorCycle: Vehicle {
+    var numberOfWheels: Int
+    
+    func stop() {
+        print("Motorcycle stopping...")
+    }
+    
+}
+
+// *****************************************
+
+protocol Flying {
+    func takeOff()
+    func land()
+}
+
+protocol Swimming {
+    func dive()
+    func surface()
+}
+
+// Protocol Composition: AdvancedVehicle
+typealias AdvancedVehicle = Vehicle & Flying & Swimming
+
+struct Seaplane: AdvancedVehicle {
+    
+    // MARK: - Vehicle protocol
+    var numberOfWheels: Int { return 4 }
+    
+    func start() {
+        print("Seaplane starting...")
+    }
+    
+    func stop() {
+        print("Seaplane stopping...")
+    }
+    
+    // MARK: - Flying protocol
+    func takeOff() {
+        print("Seaplane taking off...")
+    }
+    
+    func land() {
+        print("Seaplane landing...")
+    }
+    
+    // MARK: - Swimming protocol
+    func dive() {
+        print("Seaplane diving...")
+    }
+    
+    func surface() {
+        print("Seaplane surfacing...")
+    }
 }
