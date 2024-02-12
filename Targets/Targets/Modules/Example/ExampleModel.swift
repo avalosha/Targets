@@ -7,8 +7,10 @@
 
 import Foundation
 
+// El enfoque de programación orientada a protocolos fomenta el cambio de mentalidad, pasando de pensar en términos de clases y herencia a pensar en comportamiento y composición.
+
 protocol Identifiable {
-    var id: String { get set}
+    var id: String { get set }
     func identify()
 }
 
@@ -23,6 +25,7 @@ struct User: Identifiable {
 }
 
 // *****************************************
+// Protocolo
 
 protocol Vehicle {
     var numberOfWheels: Int { get }
@@ -30,11 +33,16 @@ protocol Vehicle {
     func stop()
 }
 
+// Extensión de protocolo 
+// para implementaciones predeterminadas
+
 extension Vehicle {
     func start() {
         print("Vehicle starting...")
     }
 }
+
+// Ejemplos:
 
 struct Car: Vehicle {
     var numberOfWheels: Int { return 4 }
@@ -59,6 +67,8 @@ struct MotorCycle: Vehicle {
 }
 
 // *****************************************
+// Composición de protocolos
+// para dividir protocolos grandes en pequeños
 
 protocol Flying {
     func takeOff()
@@ -70,12 +80,11 @@ protocol Swimming {
     func surface()
 }
 
-// Protocol Composition: AdvancedVehicle
 typealias AdvancedVehicle = Vehicle & Flying & Swimming
 
 struct Seaplane: AdvancedVehicle {
     
-    // MARK: - Vehicle protocol
+    // Vehicle protocol
     var numberOfWheels: Int { return 4 }
     
     func start() {
@@ -86,7 +95,7 @@ struct Seaplane: AdvancedVehicle {
         print("Seaplane stopping...")
     }
     
-    // MARK: - Flying protocol
+    // Flying protocol
     func takeOff() {
         print("Seaplane taking off...")
     }
@@ -95,12 +104,71 @@ struct Seaplane: AdvancedVehicle {
         print("Seaplane landing...")
     }
     
-    // MARK: - Swimming protocol
+    // Swimming protocol
     func dive() {
         print("Seaplane diving...")
     }
     
     func surface() {
         print("Seaplane surfacing...")
+    }
+}
+
+// *****************************************
+// Herencia de protocolo
+// para agregar requisitos adicionales y especialización del comportamiento
+
+protocol ElectricVehicle: Vehicle {
+    var batteryLevel: Double { get }
+    func recharge()
+}
+
+struct ElectricCar: ElectricVehicle {
+    var numberOfWheels: Int { return 4}
+    var batteryLevel: Double = 100.0
+    
+    func start() {
+        print("Electric car starting...")
+    }
+    
+    func stop() {
+        print("Electric car stopping...")
+    }
+    
+    func recharge() {
+        print("Electric car recharging...")
+    }
+    
+}
+
+// *****************************************
+// Genericos y Protocolos
+
+protocol Stackable<T> {
+    associatedtype T
+    mutating func push(_ item: T)
+    mutating func pop() -> T?
+    mutating func count()
+}
+
+struct Stack<T>: Stackable {
+    private var items = [T]()
+    
+    mutating func push(_ item: T) {
+        print("pushed item: \(item)")
+        items.append(item)
+    }
+    
+    mutating func pop() -> T? {
+        let item = items.popLast()
+        print("popped item: \(String(describing: item))")
+        return item
+    }
+    
+    mutating func count() {
+        for item in items {
+            print("Item: ",item)
+        }
+        print("Total: ",items.count)
     }
 }

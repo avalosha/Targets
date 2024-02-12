@@ -11,6 +11,7 @@ import XCTest
 final class ExampleTests: XCTestCase {
     
     private var sut: User!
+    private var numberStack = Stack<Int>()
     
     override func tearDown() {
         sut = nil
@@ -24,6 +25,18 @@ final class ExampleTests: XCTestCase {
         sut.identify()
         // Then
         XCTAssertEqual(sut.id, id)
+    }
+    
+    func testStack_doPush() {
+        // Given
+        numberStack.push(20)
+        numberStack.push(10)
+        // When
+        numberStack.count()
+        let pop = numberStack.pop()
+        numberStack.count()
+        // Then
+        XCTAssertEqual(pop, 10)
     }
 
 //    override func setUpWithError() throws {
