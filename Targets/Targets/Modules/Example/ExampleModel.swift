@@ -9,18 +9,18 @@ import Foundation
 
 // El enfoque de programación orientada a protocolos fomenta el cambio de mentalidad, pasando de pensar en términos de clases y herencia a pensar en comportamiento y composición.
 
-protocol Identifiable {
+protocol Identifiablee {
     var id: String { get set }
     func identify()
 }
 
-extension Identifiable {
+extension Identifiablee {
     func identify() {
         print("My ID is ",id)
     }
 }
 
-struct User: Identifiable {
+struct User: Identifiablee {
     var id: String
 }
 

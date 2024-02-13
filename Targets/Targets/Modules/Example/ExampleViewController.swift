@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ExampleViewController: UIViewController {
     
@@ -104,6 +105,30 @@ class ExampleViewController: UIViewController {
 //        animation.repeatDuration = .zero
 //        animation.timingFunction = CAMediaTimingFunction(name: .easeOut)
 //        blackView.layer.add(animation, forKey: nil)
+    }
+    
+//    @IBAction func onClickOpenSwiftUIBtn(_ sender: Any) {
+//        let swiftUIViewController = UIHostingController(rootView: Charts(navigationController: self.navigationController))
+//        self.navigationController?.pushViewController(swiftUIViewController, animated: true)
+//    }
+    
+    @IBAction func onClickOpenSwiftUIBtn(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            let swiftUIViewController = UIHostingController(rootView: Charts(navigationController: self.navigationController))
+            self.navigationController?.pushViewController(swiftUIViewController, animated: true)
+        case 1:
+            let swiftUIViewController = UIHostingController(rootView: BarChart(navigationController: self.navigationController))
+            self.navigationController?.pushViewController(swiftUIViewController, animated: true)
+        case 2:
+            let swiftUIViewController = UIHostingController(rootView: PieChart(navigationController: self.navigationController))
+            self.navigationController?.pushViewController(swiftUIViewController, animated: true)
+        case 3:
+            let swiftUIViewController = UIHostingController(rootView: LineChart(navigationController: self.navigationController))
+            self.navigationController?.pushViewController(swiftUIViewController, animated: true)
+        default:
+            return
+        }
     }
 }
 

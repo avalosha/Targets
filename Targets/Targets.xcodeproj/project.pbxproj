@@ -35,6 +35,16 @@
 		6A4E61AF2ADF57CA009B4BF8 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E61AE2ADF57CA009B4BF8 /* ListViewModel.swift */; };
 		6A4E61B02ADF57CA009B4BF8 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E61AE2ADF57CA009B4BF8 /* ListViewModel.swift */; };
 		6A55E8032B75AD990043D813 /* CourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A55E8022B75AD990043D813 /* CourseTests.swift */; };
+		6A9BDDD42B7AA598002EAB5E /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9BDDD32B7AA598002EAB5E /* Charts.swift */; };
+		6A9BDDD52B7AA598002EAB5E /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9BDDD32B7AA598002EAB5E /* Charts.swift */; };
+		6A9BDDD72B7AB5D1002EAB5E /* ChartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9BDDD62B7AB5D1002EAB5E /* ChartsModel.swift */; };
+		6A9BDDD82B7AB5D1002EAB5E /* ChartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9BDDD62B7AB5D1002EAB5E /* ChartsModel.swift */; };
+		6A9BDDDA2B7AC3AD002EAB5E /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9BDDD92B7AC3AD002EAB5E /* BarChart.swift */; };
+		6A9BDDDB2B7AC3AD002EAB5E /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9BDDD92B7AC3AD002EAB5E /* BarChart.swift */; };
+		6A9BDDDD2B7AC536002EAB5E /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9BDDDC2B7AC536002EAB5E /* PieChart.swift */; };
+		6A9BDDDE2B7AC536002EAB5E /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9BDDDC2B7AC536002EAB5E /* PieChart.swift */; };
+		6A9BDDE02B7AC7F6002EAB5E /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9BDDDF2B7AC7F6002EAB5E /* LineChart.swift */; };
+		6A9BDDE12B7AC7F6002EAB5E /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9BDDDF2B7AC7F6002EAB5E /* LineChart.swift */; };
 		6AA105B82B72BC4700C276AA /* TargetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE96552AC4A14700792893 /* TargetsTests.swift */; };
 		6AABF9C92ADE05D800D747DB /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AABF9C72ADE05D800D747DB /* HomeCell.swift */; };
 		6AABF9CA2ADE05D800D747DB /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AABF9C72ADE05D800D747DB /* HomeCell.swift */; };
@@ -156,6 +166,11 @@
 		6A4E61A92ADF51DE009B4BF8 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		6A4E61AE2ADF57CA009B4BF8 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		6A55E8022B75AD990043D813 /* CourseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTests.swift; sourceTree = "<group>"; };
+		6A9BDDD32B7AA598002EAB5E /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
+		6A9BDDD62B7AB5D1002EAB5E /* ChartsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsModel.swift; sourceTree = "<group>"; };
+		6A9BDDD92B7AC3AD002EAB5E /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		6A9BDDDC2B7AC536002EAB5E /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		6A9BDDDF2B7AC7F6002EAB5E /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		6AABF9C72ADE05D800D747DB /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		6AABF9C82ADE05D800D747DB /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		6AB232062ACF5589002577D2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -273,6 +288,18 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		6A9BDDCF2B7AA562002EAB5E /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				6A9BDDD32B7AA598002EAB5E /* Charts.swift */,
+				6A9BDDD62B7AB5D1002EAB5E /* ChartsModel.swift */,
+				6A9BDDD92B7AC3AD002EAB5E /* BarChart.swift */,
+				6A9BDDDC2B7AC536002EAB5E /* PieChart.swift */,
+				6A9BDDDF2B7AC7F6002EAB5E /* LineChart.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		6AA144682B5EFEBB00B0FF6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +386,7 @@
 		6AB232222ACF8742002577D2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6A9BDDCF2B7AA562002EAB5E /* SwiftUI */,
 				6AB232052ACF556C002577D2 /* TabBar */,
 				6A4E61A12ADF5083009B4BF8 /* List */,
 				6AB232132ACF7247002577D2 /* Profile */,
@@ -686,6 +714,7 @@
 			files = (
 				6A4E619C2ADF4A3C009B4BF8 /* Observable.swift in Sources */,
 				6A3D48EE2AC74E4B00B6AFE1 /* LoginViewController.swift in Sources */,
+				6A9BDDE02B7AC7F6002EAB5E /* LineChart.swift in Sources */,
 				6A3D48F12AC74E6200B6AFE1 /* RegisterViewController.swift in Sources */,
 				6AABF9C92ADE05D800D747DB /* HomeCell.swift in Sources */,
 				6A3D48F72AC7503B00B6AFE1 /* ExtensionViewController.swift in Sources */,
@@ -696,18 +725,22 @@
 				6AFDEA192AC78E9E0032D31B /* SideMenuCell.swift in Sources */,
 				6AB2322D2ACF90EB002577D2 /* DataExtension.swift in Sources */,
 				6A4E61952ADF2210009B4BF8 /* CustomImageView.swift in Sources */,
+				6A9BDDD72B7AB5D1002EAB5E /* ChartsModel.swift in Sources */,
 				6AFDEA1E2AC796EF0032D31B /* ExtensionUIViewController.swift in Sources */,
 				6AB2322A2ACF8EE5002577D2 /* NetworkMonitor.swift in Sources */,
 				6AFDEA252AC7994D0032D31B /* HomeViewController.swift in Sources */,
+				6A9BDDDA2B7AC3AD002EAB5E /* BarChart.swift in Sources */,
 				6A4E61A32ADF50C2009B4BF8 /* ListViewController.swift in Sources */,
 				6AEE963F2AC4A14400792893 /* AppDelegate.swift in Sources */,
 				6AB232072ACF5589002577D2 /* TabBarController.swift in Sources */,
+				6A9BDDD42B7AA598002EAB5E /* Charts.swift in Sources */,
 				6AB2320B2ACF5749002577D2 /* ProfileViewController.swift in Sources */,
 				6A4E61AA2ADF51DE009B4BF8 /* ListCell.swift in Sources */,
 				6A4E61982ADF4914009B4BF8 /* HomeViewModel.swift in Sources */,
 				6AB2320E2ACF5773002577D2 /* ExampleViewController.swift in Sources */,
 				6AB232272ACF8DEE002577D2 /* URLExtension.swift in Sources */,
 				6ACDF7142B72B5A4000E688F /* DateExtension.swift in Sources */,
+				6A9BDDDD2B7AC536002EAB5E /* PieChart.swift in Sources */,
 				6A4E61AF2ADF57CA009B4BF8 /* ListViewModel.swift in Sources */,
 				6AEE96412AC4A14400792893 /* SceneDelegate.swift in Sources */,
 				6AFDEA0E2AC773F90032D31B /* MainViewController.swift in Sources */,
@@ -756,6 +789,7 @@
 			files = (
 				6A4E619D2ADF4A3C009B4BF8 /* Observable.swift in Sources */,
 				6A3D48EF2AC74E4B00B6AFE1 /* LoginViewController.swift in Sources */,
+				6A9BDDE12B7AC7F6002EAB5E /* LineChart.swift in Sources */,
 				6A3D48F22AC74E6200B6AFE1 /* RegisterViewController.swift in Sources */,
 				6AABF9CA2ADE05D800D747DB /* HomeCell.swift in Sources */,
 				6A3D48F82AC7503B00B6AFE1 /* ExtensionViewController.swift in Sources */,
@@ -766,18 +800,22 @@
 				6AFDEA1A2AC78E9E0032D31B /* SideMenuCell.swift in Sources */,
 				6AB2322E2ACF90EB002577D2 /* DataExtension.swift in Sources */,
 				6A4E61962ADF2210009B4BF8 /* CustomImageView.swift in Sources */,
+				6A9BDDD82B7AB5D1002EAB5E /* ChartsModel.swift in Sources */,
 				6AFDEA1F2AC796EF0032D31B /* ExtensionUIViewController.swift in Sources */,
 				6AB2322B2ACF8EE5002577D2 /* NetworkMonitor.swift in Sources */,
 				6AFDEA262AC7994D0032D31B /* HomeViewController.swift in Sources */,
+				6A9BDDDB2B7AC3AD002EAB5E /* BarChart.swift in Sources */,
 				6A4E61A42ADF50C2009B4BF8 /* ListViewController.swift in Sources */,
 				6AEE96712AC4A3A100792893 /* AppDelegate.swift in Sources */,
 				6AB232082ACF5589002577D2 /* TabBarController.swift in Sources */,
+				6A9BDDD52B7AA598002EAB5E /* Charts.swift in Sources */,
 				6AB2320C2ACF5749002577D2 /* ProfileViewController.swift in Sources */,
 				6A4E61AB2ADF51DE009B4BF8 /* ListCell.swift in Sources */,
 				6A4E61992ADF4914009B4BF8 /* HomeViewModel.swift in Sources */,
 				6AB2320F2ACF5773002577D2 /* ExampleViewController.swift in Sources */,
 				6AB232282ACF8DEE002577D2 /* URLExtension.swift in Sources */,
 				6ACDF7162B72B5A4000E688F /* DateExtension.swift in Sources */,
+				6A9BDDDE2B7AC536002EAB5E /* PieChart.swift in Sources */,
 				6A4E61B02ADF57CA009B4BF8 /* ListViewModel.swift in Sources */,
 				6AEE96722AC4A3A100792893 /* SceneDelegate.swift in Sources */,
 				6AFDEA0F2AC773F90032D31B /* MainViewController.swift in Sources */,
