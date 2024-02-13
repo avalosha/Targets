@@ -7,6 +7,19 @@
 
 import UIKit
 
+//--------------------------------------------------------------------------
+//MARK: - New Instance
+//--------------------------------------------------------------------------
+extension ListViewController {
+    /// Retorna una nueva instancia de la clase ListViewController
+    /// - Returns: Instancia de ListViewController
+    static func newInstance() -> ListViewController? {
+        let storyboard = UIStoryboard(name: "list", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ListVC") as? ListViewController
+        return vc
+    }
+}
+
 class ListViewController: UIViewController {
 
     @IBOutlet weak var listCollectionView: UICollectionView!
@@ -99,8 +112,10 @@ class ListViewController: UIViewController {
         }
     }
     
-    private func openDetail(with index: Int) {
-        
+    private func openDetail(with id: Int) {
+        if let vc = DetailViewController.newInstance(id) {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
 }
@@ -125,7 +140,8 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        openDetail(with: indexPath.item)
+        guard let id = data[indexPath.item].id else { return }
+        openDetail(with: id)
     }
     
 }

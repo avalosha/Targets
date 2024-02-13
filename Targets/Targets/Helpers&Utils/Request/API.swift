@@ -116,11 +116,14 @@ enum ContentType: String {
 
 enum Endpoints {
     case digimon
+    case item(id: Int)
     
     var endPoint: String {
         switch self {
         case .digimon:
             return "https://www.digi-api.com/api/v1/digimon"
+        case .item(id: let id):
+            return "https://www.digi-api.com/api/v1/digimon/\(id)"
         }
     }
 }
