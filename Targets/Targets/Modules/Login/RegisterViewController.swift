@@ -71,6 +71,15 @@ class RegisterViewController: ExtensionViewController {
     @IBAction func onClickLoginBtn(_ sender: Any) {
         openLoginVC()
     }
+    
+    @IBAction func onClickGoogleBtn(_ sender: Any) {
+    }
+    
+    @IBAction func onClickFacebookBtn(_ sender: Any) {
+    }
+    
+    @IBAction func onClickAppleBtn(_ sender: Any) {
+    }
 }
 
 extension RegisterViewController: UITextFieldDelegate {

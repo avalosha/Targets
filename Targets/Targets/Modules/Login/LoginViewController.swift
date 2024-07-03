@@ -72,6 +72,18 @@ class LoginViewController: ExtensionViewController {
         openRegisterVC()
     }
     
+    @IBAction func onClickGoogleBtn(_ sender: Any) {
+    }
+    
+    @IBAction func onClickFacebookBtn(_ sender: Any) {
+    }
+    
+    @IBAction func onClickAppleBtn(_ sender: Any) {
+    }
+    
+    @IBAction func onClickEnterWithoutLoginBtn(_ sender: Any) {
+        openViewController()
+    }
 }
 
 extension LoginViewController: UITextFieldDelegate {

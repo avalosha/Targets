@@ -44,8 +44,13 @@ class HomeViewController: UIViewController {
         }
     }
 
-    @IBAction func onClickSeeMoreBtn(_ sender: Any) {
-        self.performSegue(withIdentifier: "segueList", sender: self)
+    @IBAction func onClickSeeMoreBtn(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            self.performSegue(withIdentifier: "segueList", sender: self)
+        default:
+            self.performSegue(withIdentifier: "segueDynamic", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
