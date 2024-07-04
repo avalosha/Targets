@@ -15,6 +15,9 @@ class DynamicCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     
+    private var sizeFontTitle = 14
+    private var sizeFontDescription = 10
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,6 +39,9 @@ class DynamicCell: UITableViewCell {
     }
     
     private func updateSizeFont(with value: Int) {
-        
+        sizeFontTitle = sizeFontTitle + value
+        sizeFontDescription = sizeFontDescription + value
+        titleLbl.font = UIFont.boldSystemFont(ofSize: CGFloat(sizeFontTitle))
+        descriptionLbl.font = UIFont.systemFont(ofSize: CGFloat(sizeFontDescription))
     }
 }

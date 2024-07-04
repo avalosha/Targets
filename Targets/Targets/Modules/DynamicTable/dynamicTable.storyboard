@@ -41,7 +41,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="qHX-7y-Hnw" secondAttribute="bottom" constant="15" id="soY-KG-x0U"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boO-Xc-EnF">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boO-Xc-EnF" userLabel="Container 2">
                                                 <rect key="frame" x="0.0" y="128" width="393" height="168"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I5f-45-fBk">
@@ -86,6 +86,7 @@
                     </view>
                     <connections>
                         <outlet property="dynamicTableView" destination="I5f-45-fBk" id="5tS-UK-U7o"/>
+                        <outlet property="heightTableViewConstraint" destination="aL6-br-wwG" id="i0m-ol-7gF"/>
                         <outlet property="sizeFontSlider" destination="qHX-7y-Hnw" id="mVT-bq-5cI"/>
                     </connections>
                 </viewController>

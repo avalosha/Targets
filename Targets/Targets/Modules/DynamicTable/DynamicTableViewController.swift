@@ -12,6 +12,8 @@ class DynamicTableViewController: UIViewController {
     @IBOutlet weak var dynamicTableView: UITableView!
     @IBOutlet weak var sizeFontSlider: UISlider!
     
+    @IBOutlet weak var heightTableViewConstraint: NSLayoutConstraint!
+    
     private let data : [DataObject] = [
         DataObject(title: "Please Show Appreciation",
                    subtitle: "Drop a couple claps if you like this"),
@@ -25,10 +27,13 @@ class DynamicTableViewController: UIViewController {
                    subtitle: "Quite a few of the folks complain that they cant use numberOfLines property in UILabel inside a TableViewCell but this shall allow you to do that.")
     ]
     
+    private var currentValue = 14
+    private var currentDifference: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("Entro")
+        setupTableView()
     }
     
     private func setupTableView() {
@@ -44,7 +49,9 @@ class DynamicTableViewController: UIViewController {
     }
 
     @IBAction func onChangeValueSlider(_ sender: UISlider) {
-        
+        currentDifference = Int(sender.value) - currentValue
+        currentValue = Int(sender.value)
+        dynamicTableView.reloadData()
     }
 }
 
@@ -56,11 +63,19 @@ extension DynamicTableViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DynamicCell.identifier, for: indexPath) as? DynamicCell else { fatalError("xib doesn't exist") }
         
+        let data = data[indexPath.row]
+        cell.setupCell(with: data, size: currentDifference)
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        tableView.layoutSubviews()
+        heightTableViewConstraint.constant = tableView.contentSize.height
     }
     
 }
