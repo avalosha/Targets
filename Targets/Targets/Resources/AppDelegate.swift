@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Sentry
+
 import FirebaseCore
 
 @main
@@ -14,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        SentrySDK.start { options in
+            options.dsn = "https://cc839ad4fde4b2d1ea1429310720cc2c@o4507540201865216.ingest.us.sentry.io/4507540203372544"
+            options.debug = true // Enabled debug when first installing is always helpful
+            options.enableTracing = true 
+
+            // Uncomment the following lines to add more data to your events
+            // options.attachScreenshot = true // This adds a screenshot to the error events
+            // options.attachViewHierarchy = true // This adds the view hierarchy to the error events
+        }
+        // Remove the next line after confirming that your Sentry integration is working.
+        SentrySDK.capture(message: "This app uses Sentry! :)")
+
         // Override point for customization after application launch.
         
         // Firebase

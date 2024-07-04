@@ -7,6 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import Sentry
+
+enum PasswordError: Error {
+    case short, obvious
+}
 
 class LoginViewController: ExtensionViewController {
 
@@ -37,6 +42,15 @@ class LoginViewController: ExtensionViewController {
             return
         }
         
+        do {
+            let result = try checkPassword(password)
+            print("Password rating: \(result)")
+        } catch {
+            print("There was an error.")
+            SentrySDK.capture(error: error)
+            return
+        }
+        
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             
             if error == nil {
@@ -49,6 +63,24 @@ class LoginViewController: ExtensionViewController {
                 self?.statusLbl.text = "ERROR AL LOGUEARSE: \(error.debugDescription)))"
                 self?.cleanMessages()
             }
+        }
+    }
+    
+    func checkPassword(_ password: String) throws -> String {
+        if password.count < 5 {
+            throw PasswordError.short
+        }
+
+        if password == "12345" {
+            throw PasswordError.obvious
+        }
+
+        if password.count < 8 {
+            return "OK"
+        } else if password.count < 10 {
+            return "Good"
+        } else {
+            return "Excellent"
         }
     }
     
